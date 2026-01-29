@@ -1,0 +1,83 @@
+Loading bird data...
+Found 75 birds to process
+
+[1/75] Golden-cheeked Woodpecker (Melanerpes chrysogenys)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[2/75] Streak-backed Oriole (Icterus pustulatus)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[3/75] Yellow-winged Cacique (Cassiculus melanicterus)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[4/75] Thick-billed Kingbird (Tyrannus crassirostris)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[5/75] Rufous-backed Robin (Turdus rufopalliatus)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[6/75] Sinaloa Crow (Corvus sinaloae)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[7/75] Cinnamon Hummingbird (Amazilia rutila)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[8/75] Cinnamon-bellied Saltator (Saltator grandis)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[9/75] Rufous-bellied Chachalaca (Ortalis wagleri)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[10/75] Happy Wren (Pheugopedius felix)
+  Image exists, skipping
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[11/75] Ruddy Ground Dove (Columbina talpacoti)
+  Fetching image...
+  No image found
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[12/75] Black-throated Magpie-Jay (Calocitta colliei)
+  Fetching image...
+  No image found
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found
+
+[13/75] MacGillivray's Warbler (Geothlypis tolmiei)
+  Fetching image...
+  No image found
+  Fetching audio...
+  Xeno-canto HTTP error: 404
+  No audio found

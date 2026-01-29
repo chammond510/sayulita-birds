@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2e7d32">
+    <meta name="description" content="Learn 75 bird species for birding in Sayulita, Nayarit, Mexico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Sayulita Birds</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>Sayulita Birds</h1>
+            <div class="header-controls">
+                <button id="shuffleBtn" class="icon-btn" title="Shuffle cards">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M14.83,13.41L13.42,14.82L16.55,17.95L14.5,20H20V14.5L17.96,16.54L14.83,13.41M14.5,4L16.54,6.04L4,18.59L5.41,20L17.96,7.46L20,9.5V4M10.59,9.17L5.41,4L4,5.41L9.17,10.58L10.59,9.17Z"/></svg>
+                </button>
+                <button id="settingsBtn" class="icon-btn" title="Settings">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mode Tabs -->
+        <nav class="mode-tabs">
+            <button class="mode-tab active" data-mode="study">Study</button>
+            <button class="mode-tab" data-mode="photo-quiz">Photo Quiz</button>
+            <button class="mode-tab" data-mode="audio-quiz">Audio Quiz</button>
+        </nav>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="progress-text" id="progressText">1 / 75</span>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Study Mode -->
+            <section id="studyMode" class="mode-section active">
+                <div class="flashcard-container">
+                    <div class="flashcard" id="flashcard">
+                        <div class="flashcard-inner">
+                            <!-- Front: Photo -->
+                            <div class="flashcard-front">
+                                <img id="birdPhoto" src="" alt="Bird photo" class="bird-photo">
+                                <div class="photo-hint">Tap to reveal</div>
+                            </div>
+                            <!-- Back: Info -->
+                            <div class="flashcard-back">
+                                <div class="bird-info">
+                                    <h2 class="bird-name" id="birdName"></h2>
+                                    <p class="bird-scientific" id="birdScientific"></p>
+                                    <div class="bird-frequency" id="birdFrequency"></div>
+                                    <p class="bird-description" id="birdDescription"></p>
+                                    <div class="field-marks" id="fieldMarks"></div>
+                                    <div class="bird-habitat" id="birdHabitat"></div>
+                                    <div class="audio-player" id="audioPlayer">
+                                        <button class="play-btn" id="playAudioBtn">
+                                            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z"/></svg>
+                                        </button>
+                                        <span class="audio-label">Play call</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="card-nav">
+                    <button class="nav-btn" id="prevBtn">
+                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"/></svg>
+                    </button>
+                    <button class="nav-btn" id="nextBtn">
+                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Photo Quiz Mode -->
+            <section id="photoQuizMode" class="mode-section">
+                <div class="quiz-container">
+                    <div class="quiz-photo-container">
+                        <img id="quizPhoto" src="" alt="Identify this bird" class="quiz-photo">
+                    </div>
+                    <p class="quiz-prompt">Which bird is this?</p>
+                    <div class="quiz-options" id="quizOptions">
+                        <!-- Options populated by JS -->
+                    </div>
+                    <div class="quiz-feedback" id="quizFeedback"></div>
+                    <button class="quiz-next-btn" id="quizNextBtn" style="display:none;">Next Question</button>
+                </div>
+                <div class="quiz-score" id="quizScore">Score: 0 / 0</div>
+            </section>
+
+            <!-- Audio Quiz Mode -->
+            <section id="audioQuizMode" class="mode-section">
+                <div class="quiz-container">
+                    <div class="audio-quiz-player">
+                        <button class="big-play-btn" id="audioQuizPlayBtn">
+                            <svg viewBox="0 0 24 24" width="64" height="64"><path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z"/></svg>
+                        </button>
+                        <p class="audio-instruction">Tap to play bird call</p>
+                    </div>
+                    <p class="quiz-prompt">Which bird makes this call?</p>
+                    <div class="quiz-options" id="audioQuizOptions">
+                        <!-- Options populated by JS -->
+                    </div>
+                    <div class="quiz-feedback" id="audioQuizFeedback"></div>
+                    <button class="quiz-next-btn" id="audioQuizNextBtn" style="display:none;">Next Question</button>
+                </div>
+                <div class="quiz-score" id="audioQuizScore">Score: 0 / 0</div>
+            </section>
+        </main>
+
+        <!-- Settings Modal -->
+        <div class="modal" id="settingsModal">
+            <div class="modal-content">
+                <h2>Settings</h2>
+                <div class="setting-item">
+                    <label for="themeSelect">Theme</label>
+                    <select id="themeSelect">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="high-contrast">High Contrast (Outdoor)</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="showScientific" checked>
+                        Show scientific names
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label for="sortSelect">Sort birds by</label>
+                    <select id="sortSelect">
+                        <option value="frequency">Frequency (most common first)</option>
+                        <option value="alphabetical">Alphabetical</option>
+                        <option value="random">Random</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <button class="btn-primary" id="downloadOfflineBtn" style="margin-top:8px;">Download for Offline Use</button>
+                </div>
+                <button class="modal-close-btn" id="closeSettings">Done</button>
+            </div>
+        </div>
+
+        <!-- Offline Indicator -->
+        <div class="offline-indicator" id="offlineIndicator">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M23.64,7C23.19,6.66 18.71,3 12,3C10.6,3 9.32,3.19 8.15,3.5L23.64,7M1,3.27L4.47,6.75C3.85,7.08 3.31,7.45 2.86,7.81L1.41,6.36L0,5.25L1,3.27M6.5,8.77L8.2,10.47C8.79,10.17 9.38,9.91 10,9.7L10,9.5C10,8.57 10.57,7.77 11.39,7.39L13.11,9.11C12.61,9.32 12.19,9.65 11.87,10.07L14.03,12.23C14.34,12.08 14.66,12 15,12C16.66,12 18,13.34 18,15C18,15.34 17.92,15.66 17.77,15.97L21.86,20.06L20.25,21.67L1,3.27M12,21C7.95,21 4.21,19.34 1.14,16.07L2.55,14.66C5.22,17.53 8.45,19 12,19C13.26,19 14.5,18.81 15.69,18.44L17.46,20.21C15.77,20.72 13.95,21 12,21Z"/></svg>
+            Offline Mode
+        </div>
+
+        <!-- Download for Offline Overlay -->
+        <div class="modal" id="downloadModal">
+            <div class="modal-content download-modal-content">
+                <h2>Download for Offline</h2>
+                <p class="download-info" id="downloadInfo">Download all photos and audio to use this app without internet.</p>
+                <div class="download-progress-container" id="downloadProgressContainer" style="display:none;">
+                    <div class="download-progress-bar">
+                        <div class="download-progress-fill" id="downloadProgressFill"></div>
+                    </div>
+                    <p class="download-status" id="downloadStatus">Downloading...</p>
+                </div>
+                <div class="download-actions" id="downloadActions">
+                    <button class="btn-primary" id="startDownloadBtn">Download All Media</button>
+                    <button class="modal-close-btn" id="closeDownloadBtn">Later</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+            <p>Loading birds...</p>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/flashcard.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

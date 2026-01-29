@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="64" fill="#2e7d32"/>
+  <g transform="translate(56, 100)">
+    <path fill="#ffffff" d="M320,160c0,88.4-71.6,160-160,160S0,248.4,0,160S71.6,0,160,0S320,71.6,320,160z M240,120c0-22.1-17.9-40-40-40s-40,17.9-40,40s17.9,40,40,40S240,142.1,240,120z"/>
+    <circle cx="200" cy="120" r="16" fill="#2e7d32"/>
+    <path fill="#ffffff" d="M320,180 L400,140 L380,180 L400,220 L320,180z"/>
+  </g>
+  <text x="256" y="420" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="64" font-weight="bold">BIRDS</text>
+</svg>

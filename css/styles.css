@@ -1,0 +1,836 @@
+/* Sayulita Birds - Flashcard App Styles */
+
+:root {
+    --primary-color: #2e7d32;
+    --primary-dark: #1b5e20;
+    --primary-light: #4caf50;
+    --background: #f5f5f5;
+    --surface: #ffffff;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 12px rgba(0,0,0,0.15);
+    --card-radius: 16px;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --background: #121212;
+    --surface: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border-color: #333333;
+    --shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* High Contrast Theme (Outdoor) */
+[data-theme="high-contrast"] {
+    --primary-color: #000000;
+    --background: #ffffff;
+    --surface: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --border-color: #000000;
+    --shadow: 0 2px 0 #000000;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: var(--background);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--primary-color);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.header-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.icon-btn:hover, .icon-btn:active {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mode Tabs */
+.mode-tabs {
+    display: flex;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mode-tab {
+    flex: 1;
+    min-width: 100px;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.mode-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Progress Bar */
+.progress-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 12px;
+    background: var(--surface);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--border-color);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    width: 1.33%;
+}
+
+.progress-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    min-width: 60px;
+    text-align: right;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mode-section {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+}
+
+.mode-section.active {
+    display: flex;
+}
+
+/* Flashcard Container */
+.flashcard-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    padding: 8px;
+}
+
+.flashcard {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+}
+
+/* Flashcard Front */
+.flashcard-front {
+    display: flex;
+    flex-direction: column;
+}
+
+.bird-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-hint {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Flashcard Back */
+.flashcard-back {
+    overflow-y: auto;
+}
+
+.bird-info {
+    padding: 20px;
+}
+
+.bird-name {
+    margin: 0 0 4px 0;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.bird-scientific {
+    margin: 0 0 12px 0;
+    font-size: 0.875rem;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.bird-frequency {
+    display: inline-block;
+    background: var(--primary-light);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.bird-description {
+    margin: 0 0 16px 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.field-marks {
+    margin-bottom: 12px;
+}
+
+.field-marks h4 {
+    margin: 0 0 8px 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.field-marks ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.field-marks li {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.bird-habitat {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.bird-habitat strong {
+    color: var(--text-primary);
+}
+
+/* Audio Player */
+.audio-player {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--background);
+    border-radius: 12px;
+}
+
+.play-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.play-btn:hover {
+    background: var(--primary-dark);
+}
+
+.play-btn:active {
+    transform: scale(0.95);
+}
+
+.play-btn.playing svg {
+    display: none;
+}
+
+.play-btn.playing::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background: white;
+}
+
+.audio-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.audio-unavailable {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Card Navigation */
+.card-nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px;
+}
+
+.nav-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+    background: var(--primary-color);
+    color: white;
+}
+
+.nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Quiz Styles */
+.quiz-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+.quiz-photo-container {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+}
+
+.quiz-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quiz-prompt {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+    text-align: center;
+}
+
+.quiz-options {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.quiz-option {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text-primary);
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quiz-option:hover {
+    border-color: var(--primary-color);
+}
+
+.quiz-option.correct {
+    border-color: #4caf50;
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.quiz-option.incorrect {
+    border-color: #f44336;
+    background: #ffebee;
+    color: #c62828;
+}
+
+.quiz-option:disabled {
+    cursor: default;
+}
+
+.quiz-feedback {
+    margin: 16px 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    text-align: center;
+    min-height: 48px;
+}
+
+.quiz-feedback.correct {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.quiz-feedback.incorrect {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.quiz-next-btn {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quiz-next-btn:hover {
+    background: var(--primary-dark);
+}
+
+.quiz-score {
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Audio Quiz */
+.audio-quiz-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.big-play-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.big-play-btn:hover {
+    background: var(--primary-dark);
+}
+
+.big-play-btn:active {
+    transform: scale(0.95);
+}
+
+.audio-instruction {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--surface);
+    border-radius: var(--card-radius);
+    padding: 24px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    margin: 0 0 24px 0;
+    font-size: 1.25rem;
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-item label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9375rem;
+    color: var(--text-primary);
+}
+
+.setting-item select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.setting-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary-color);
+}
+
+.modal-close-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* Offline Indicator */
+.offline-indicator {
+    display: none;
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff9800;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    align-items: center;
+    gap: 6px;
+    box-shadow: var(--shadow);
+    z-index: 150;
+}
+
+.offline-indicator.visible {
+    display: flex;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--background);
+    z-index: 300;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--border-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Placeholder for missing photos */
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: var(--primary-dark);
+}
+
+.photo-placeholder svg {
+    width: 80px;
+    height: 80px;
+    opacity: 0.5;
+    margin-bottom: 16px;
+}
+
+.photo-placeholder .species-name {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 16px;
+}
+
+/* Touch/Swipe Support */
+@media (hover: none) {
+    .nav-btn:hover {
+        border-color: var(--border-color);
+        color: var(--text-primary);
+    }
+
+    .quiz-option:hover {
+        border-color: var(--border-color);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 380px) {
+    .flashcard {
+        max-width: 100%;
+    }
+
+    .bird-name {
+        font-size: 1.25rem;
+    }
+
+    .bird-info {
+        padding: 16px;
+    }
+}
+
+@media (min-height: 800px) {
+    .flashcard {
+        max-height: 500px;
+    }
+}
+
+/* Download for Offline Modal */
+.download-modal-content {
+    text-align: center;
+}
+
+.download-modal-content h2 {
+    margin-bottom: 12px;
+}
+
+.download-info {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.download-progress-container {
+    margin: 20px 0;
+}
+
+.download-progress-bar {
+    width: 100%;
+    height: 12px;
+    background: var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.download-progress-fill {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 6px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.download-status {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.download-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-primary:active {
+    opacity: 0.8;
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Safe area for notched phones */
+@supports (padding: env(safe-area-inset-top)) {
+    .app-header {
+        padding-top: calc(12px + env(safe-area-inset-top));
+    }
+
+    .offline-indicator {
+        bottom: calc(16px + env(safe-area-inset-bottom));
+    }
+}
