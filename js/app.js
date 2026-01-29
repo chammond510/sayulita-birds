@@ -306,7 +306,7 @@ const App = {
         // If Cache API is available (localhost/HTTPS), use it for reliable offline
         if (useCache) {
             try {
-                cache = await caches.open('sayulita-birds-v5');
+                cache = await caches.open('sayulita-birds-v6');
             } catch (e) {
                 cache = null;
             }

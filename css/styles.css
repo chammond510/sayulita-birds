@@ -246,22 +246,13 @@ html, body {
     display: flex;
     width: 100%;
     height: 100%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    -webkit-overflow-scrolling: touch;
-}
-
-.gallery-track::-webkit-scrollbar {
-    display: none;
+    will-change: transform;
 }
 
 .gallery-slide {
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
-    scroll-snap-align: start;
 }
 
 .gallery-slide img {

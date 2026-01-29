@@ -5,9 +5,15 @@ const Flashcard = {
     isFlipped: false,
     touchStartX: 0,
     touchEndX: 0,
+    touchStartY: 0,
+    touchEndY: 0,
     touchStartTarget: null,
+    touchStartTime: 0,
     currentPhotoIndex: 0,
     photoUrls: [],
+    galleryDragging: false,
+    galleryStartX: 0,
+    galleryCurrentX: 0,
 
     elements: {
         card: null,
@@ -50,12 +56,16 @@ const Flashcard = {
         this.elements.progressFill = document.getElementById('progressFill');
         this.elements.progressText = document.getElementById('progressText');
 
-        // Set up event listeners
+        // Card tap to flip — use touchend timing to distinguish tap from swipe
         this.elements.card.addEventListener('click', (e) => {
-            // Don't flip if clicking inside gallery dots
+            // Don't flip if clicking dots or gallery navigation
             if (e.target.closest('.gallery-dots')) return;
+            // On touch devices, flip is handled by touchend to avoid conflicts
+            // Only use click for non-touch (mouse) interactions
+            if (this._lastTouchEnd && (Date.now() - this._lastTouchEnd < 300)) return;
             this.flip();
         });
+
         this.elements.prevBtn.addEventListener('click', () => this.previous());
         this.elements.nextBtn.addEventListener('click', () => this.next());
         this.elements.playBtn.addEventListener('click', (e) => {
@@ -63,20 +73,84 @@ const Flashcard = {
             this.toggleAudio();
         });
 
-        // Touch/swipe support
+        // Touch handling on the card
         this.elements.card.addEventListener('touchstart', (e) => {
-            this.touchStartX = e.changedTouches[0].screenX;
+            this.touchStartX = e.changedTouches[0].clientX;
+            this.touchStartY = e.changedTouches[0].clientY;
             this.touchStartTarget = e.target;
+            this.touchStartTime = Date.now();
+
+            // If touching the gallery front and multiple photos, start gallery drag
+            if (!this.isFlipped && this.photoUrls.length > 1 &&
+                this.touchStartTarget.closest('.photo-gallery')) {
+                this.galleryDragging = true;
+                this.galleryStartX = this.touchStartX;
+                this.galleryCurrentX = 0;
+            }
+        }, { passive: true });
+
+        this.elements.card.addEventListener('touchmove', (e) => {
+            if (this.galleryDragging) {
+                const currentX = e.changedTouches[0].clientX;
+                const currentY = e.changedTouches[0].clientY;
+                const diffX = currentX - this.touchStartX;
+                const diffY = currentY - this.touchStartY;
+
+                // If moving more vertically, cancel gallery drag
+                if (Math.abs(diffY) > Math.abs(diffX) && Math.abs(diffX) < 10) {
+                    this.galleryDragging = false;
+                    return;
+                }
+
+                this.galleryCurrentX = currentX - this.galleryStartX;
+                const slideWidth = this.elements.gallery.offsetWidth;
+                const baseOffset = -this.currentPhotoIndex * slideWidth;
+                this.elements.galleryTrack.style.transition = 'none';
+                this.elements.galleryTrack.style.transform = `translateX(${baseOffset + this.galleryCurrentX}px)`;
+            }
         }, { passive: true });
 
         this.elements.card.addEventListener('touchend', (e) => {
-            this.touchEndX = e.changedTouches[0].screenX;
-            this.handleSwipe();
-        }, { passive: true });
+            this._lastTouchEnd = Date.now();
+            this.touchEndX = e.changedTouches[0].clientX;
+            this.touchEndY = e.changedTouches[0].clientY;
 
-        // Gallery scroll listener to update dots
-        this.elements.galleryTrack.addEventListener('scroll', () => {
-            this.updateGalleryDots();
+            const diffX = this.touchEndX - this.touchStartX;
+            const diffY = this.touchEndY - this.touchStartY;
+            const elapsed = Date.now() - this.touchStartTime;
+            const isTap = Math.abs(diffX) < 10 && Math.abs(diffY) < 10 && elapsed < 300;
+
+            if (this.galleryDragging) {
+                this.galleryDragging = false;
+                const threshold = this.elements.gallery.offsetWidth * 0.25;
+
+                if (Math.abs(this.galleryCurrentX) > threshold) {
+                    if (this.galleryCurrentX < 0 && this.currentPhotoIndex < this.photoUrls.length - 1) {
+                        this.goToPhoto(this.currentPhotoIndex + 1);
+                    } else if (this.galleryCurrentX > 0 && this.currentPhotoIndex > 0) {
+                        this.goToPhoto(this.currentPhotoIndex - 1);
+                    } else {
+                        this.goToPhoto(this.currentPhotoIndex); // snap back
+                    }
+                } else if (isTap) {
+                    this.flip();
+                } else {
+                    this.goToPhoto(this.currentPhotoIndex); // snap back
+                }
+                return;
+            }
+
+            // Handle tap to flip
+            if (isTap) {
+                // Don't flip on dot taps
+                if (!this.touchStartTarget.closest('.gallery-dots')) {
+                    this.flip();
+                }
+                return;
+            }
+
+            // Handle swipe for bird navigation (on back side, or if single photo)
+            this.handleSwipe();
         }, { passive: true });
 
         // Keyboard navigation
@@ -86,14 +160,14 @@ const Flashcard = {
             switch (e.key) {
                 case 'ArrowLeft':
                     if (!this.isFlipped && this.photoUrls.length > 1) {
-                        this.scrollToPhoto(this.currentPhotoIndex - 1);
+                        this.goToPhoto(this.currentPhotoIndex - 1);
                     } else {
                         this.previous();
                     }
                     break;
                 case 'ArrowRight':
                     if (!this.isFlipped && this.photoUrls.length > 1) {
-                        this.scrollToPhoto(this.currentPhotoIndex + 1);
+                        this.goToPhoto(this.currentPhotoIndex + 1);
                     } else {
                         this.next();
                     }
@@ -119,14 +193,6 @@ const Flashcard = {
     },
 
     handleSwipe() {
-        // If touch started inside the photo gallery and card is not flipped,
-        // let CSS scroll-snap handle the horizontal swipe (don't navigate birds)
-        if (!this.isFlipped && this.touchStartTarget &&
-            this.touchStartTarget.closest('.photo-gallery') &&
-            this.photoUrls.length > 1) {
-            return;
-        }
-
         const threshold = 50;
         const diff = this.touchEndX - this.touchStartX;
 
@@ -146,7 +212,7 @@ const Flashcard = {
         // Build slides
         this.elements.galleryTrack.innerHTML = this.photoUrls.map((url, i) => `
             <div class="gallery-slide">
-                <img src="${url}" alt="${bird.commonName}" ${i > 0 ? 'loading="lazy"' : ''}>
+                <img src="${url}" alt="${bird.commonName}" draggable="false" ${i > 0 ? 'loading="lazy"' : ''}>
             </div>
         `).join('');
 
@@ -160,35 +226,32 @@ const Flashcard = {
             this.elements.galleryDots.querySelectorAll('.gallery-dot').forEach(dot => {
                 dot.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    this.scrollToPhoto(parseInt(dot.dataset.index));
+                    this.goToPhoto(parseInt(dot.dataset.index));
                 });
             });
         } else {
             this.elements.galleryDots.innerHTML = '';
         }
 
-        // Reset scroll position
-        this.elements.galleryTrack.scrollLeft = 0;
+        // Set initial position
+        this.elements.galleryTrack.style.transform = 'translateX(0)';
+        this.elements.galleryTrack.style.transition = '';
     },
 
-    scrollToPhoto(index) {
-        if (index < 0 || index >= this.photoUrls.length) return;
+    goToPhoto(index) {
+        if (index < 0 || index >= this.photoUrls.length) {
+            // Snap back to current
+            index = this.currentPhotoIndex;
+        }
         this.currentPhotoIndex = index;
-        const slideWidth = this.elements.galleryTrack.offsetWidth;
-        this.elements.galleryTrack.scrollTo({
-            left: slideWidth * index,
-            behavior: 'smooth'
-        });
+        const slideWidth = this.elements.gallery.offsetWidth;
+        this.elements.galleryTrack.style.transition = 'transform 0.3s ease';
+        this.elements.galleryTrack.style.transform = `translateX(${-index * slideWidth}px)`;
+        this.updateGalleryDots();
     },
 
     updateGalleryDots() {
         if (this.photoUrls.length <= 1) return;
-        const slideWidth = this.elements.galleryTrack.offsetWidth;
-        if (slideWidth === 0) return;
-        const newIndex = Math.round(this.elements.galleryTrack.scrollLeft / slideWidth);
-        if (newIndex !== this.currentPhotoIndex) {
-            this.currentPhotoIndex = newIndex;
-        }
         this.elements.galleryDots.querySelectorAll('.gallery-dot').forEach((dot, i) => {
             dot.classList.toggle('active', i === this.currentPhotoIndex);
         });
