@@ -11,8 +11,14 @@
       "scientificName": "Melanerpes chrysogenys",
       "frequency": 43.55,
       "description": "Medium-sized woodpecker with striking golden-yellow cheeks and forehead contrasting with black-and-white barred back. Males have extensive red crown extending to nape; females have black crown with red only on nape.",
-      "fieldMarks": ["Golden-yellow cheek patches", "Barred black and white back", "Red crown (male) or red nape only (female)", "Pale eye"],
-      "habitat": "Dry forest, woodland edges, gardens, palm groves"
+      "fieldMarks": [
+        "Golden-yellow cheek patches",
+        "Barred black and white back",
+        "Red crown (male) or red nape only (female)",
+        "Pale eye"
+      ],
+      "habitat": "Dry forest, woodland edges, gardens, palm groves",
+      "photoCount": 3
     },
     {
       "id": "streak-backed-oriole",
@@ -21,8 +27,14 @@
       "scientificName": "Icterus pustulatus",
       "frequency": 43.16,
       "description": "Bright orange oriole with distinctive black streaking on the back. Deep orange head and underparts with black throat and lores. Heavy, slightly curved bill. Common in open woodlands and gardens.",
-      "fieldMarks": ["Bright orange overall", "Streaked black back", "Black throat and eye mask", "Thick bill"],
-      "habitat": "Dry forest, gardens, woodland edges, palm trees"
+      "fieldMarks": [
+        "Bright orange overall",
+        "Streaked black back",
+        "Black throat and eye mask",
+        "Thick bill"
+      ],
+      "habitat": "Dry forest, gardens, woodland edges, palm trees",
+      "photoCount": 3
     },
     {
       "id": "yellow-winged-cacique",
@@ -31,8 +43,14 @@
       "scientificName": "Cassiculus melanicterus",
       "frequency": 37.84,
       "description": "Large, conspicuous black bird with bright yellow rump, wing patches, and tail base. Pale blue eye and thick pale bill. Often found in noisy flocks building pendulous nests in colonies.",
-      "fieldMarks": ["Black body with yellow wing patches", "Yellow rump and tail base", "Pale blue eye", "Thick pale bill"],
-      "habitat": "Forest edges, plantations, gardens, often near water"
+      "fieldMarks": [
+        "Black body with yellow wing patches",
+        "Yellow rump and tail base",
+        "Pale blue eye",
+        "Thick pale bill"
+      ],
+      "habitat": "Forest edges, plantations, gardens, often near water",
+      "photoCount": 3
     },
     {
       "id": "thick-billed-kingbird",
@@ -41,8 +59,14 @@
       "scientificName": "Tyrannus crassirostris",
       "frequency": 28.85,
       "description": "Large flycatcher with heavy dark bill. Gray-brown above with whitish underparts washed yellow on belly. Dark mask through eye. Often perches conspicuously on exposed branches.",
-      "fieldMarks": ["Thick, heavy dark bill", "Gray-brown above, whitish below", "Yellow wash on belly", "Dark mask through eye"],
-      "habitat": "Woodland edges, riparian areas, semi-open country"
+      "fieldMarks": [
+        "Thick, heavy dark bill",
+        "Gray-brown above, whitish below",
+        "Yellow wash on belly",
+        "Dark mask through eye"
+      ],
+      "habitat": "Woodland edges, riparian areas, semi-open country",
+      "photoCount": 3
     },
     {
       "id": "rufous-backed-robin",
@@ -51,8 +75,15 @@
       "scientificName": "Turdus rufopalliatus",
       "frequency": 27.76,
       "description": "Handsome thrush with gray head, rufous-orange back, and orange-rufous underparts. Streaked throat and yellow eye-ring. Often hops on ground in shaded areas searching for invertebrates.",
-      "fieldMarks": ["Rufous-orange back", "Gray head", "Orange underparts", "Yellow eye-ring", "Streaked throat"],
-      "habitat": "Gardens, woodland edges, forest understory"
+      "fieldMarks": [
+        "Rufous-orange back",
+        "Gray head",
+        "Orange underparts",
+        "Yellow eye-ring",
+        "Streaked throat"
+      ],
+      "habitat": "Gardens, woodland edges, forest understory",
+      "photoCount": 3
     },
     {
       "id": "sinaloa-crow",
@@ -61,8 +92,14 @@
       "scientificName": "Corvus sinaloae",
       "frequency": 26.81,
       "description": "Small, glossy black crow endemic to western Mexico. Smaller than American Crow with proportionally smaller bill. Voice is higher-pitched and more nasal than other crows.",
-      "fieldMarks": ["Small all-black crow", "Glossy plumage", "Smaller bill than American Crow", "High-pitched nasal calls"],
-      "habitat": "Coastal areas, towns, agricultural land, beaches"
+      "fieldMarks": [
+        "Small all-black crow",
+        "Glossy plumage",
+        "Smaller bill than American Crow",
+        "High-pitched nasal calls"
+      ],
+      "habitat": "Coastal areas, towns, agricultural land, beaches",
+      "photoCount": 3
     },
     {
       "id": "cinnamon-hummingbird",
@@ -71,8 +108,14 @@
       "scientificName": "Amazilia rutila",
       "frequency": 25.13,
       "description": "Medium-sized hummingbird with entirely cinnamon-rufous underparts and rufous tail. Bronzy-green above with red bill showing dark tip. Common at feeders and flowering plants.",
-      "fieldMarks": ["Cinnamon-rufous underparts", "Rufous tail", "Red bill with dark tip", "Bronzy-green back"],
-      "habitat": "Dry forest, gardens, woodland edges, scrub"
+      "fieldMarks": [
+        "Cinnamon-rufous underparts",
+        "Rufous tail",
+        "Red bill with dark tip",
+        "Bronzy-green back"
+      ],
+      "habitat": "Dry forest, gardens, woodland edges, scrub",
+      "photoCount": 3
     },
     {
       "id": "cinnamon-bellied-saltator",
@@ -81,8 +124,14 @@
       "scientificName": "Saltator grandis",
       "frequency": 24.19,
       "description": "Large finch-like bird with olive-gray upperparts and rich cinnamon-buff underparts. White supercilium and throat bordered by black moustache stripe. Heavy bill.",
-      "fieldMarks": ["Cinnamon-buff underparts", "White eyebrow stripe", "Black moustache stripe", "Heavy gray bill"],
-      "habitat": "Forest edges, second growth, gardens, hedgerows"
+      "fieldMarks": [
+        "Cinnamon-buff underparts",
+        "White eyebrow stripe",
+        "Black moustache stripe",
+        "Heavy gray bill"
+      ],
+      "habitat": "Forest edges, second growth, gardens, hedgerows",
+      "photoCount": 3
     },
     {
       "id": "rufous-bellied-chachalaca",
@@ -91,8 +140,15 @@
       "scientificName": "Ortalis wagleri",
       "frequency": 23.42,
       "description": "Large, chicken-like bird with long tail. Gray-brown head and breast with rufous belly. Red throat skin visible when calling. Very vocal at dawn with raucous cha-cha-LAC-a calls.",
-      "fieldMarks": ["Rufous belly", "Gray-brown head and breast", "Long tail", "Red throat skin", "Loud raucous calls"],
-      "habitat": "Dry forest, woodland edges, second growth"
+      "fieldMarks": [
+        "Rufous belly",
+        "Gray-brown head and breast",
+        "Long tail",
+        "Red throat skin",
+        "Loud raucous calls"
+      ],
+      "habitat": "Dry forest, woodland edges, second growth",
+      "photoCount": 3
     },
     {
       "id": "happy-wren",
@@ -101,8 +157,14 @@
       "scientificName": "Pheugopedius felix",
       "frequency": 22.61,
       "description": "Small, richly colored wren with rufous crown, bold white supercilium, and barred underparts. Often heard before seen, giving loud cheerful duets. Skulks in dense vegetation.",
-      "fieldMarks": ["Rufous crown", "Bold white eyebrow", "Barred underparts", "Black-and-white face pattern"],
-      "habitat": "Dense undergrowth, thickets, forest edges"
+      "fieldMarks": [
+        "Rufous crown",
+        "Bold white eyebrow",
+        "Barred underparts",
+        "Black-and-white face pattern"
+      ],
+      "habitat": "Dense undergrowth, thickets, forest edges",
+      "photoCount": 3
     },
     {
       "id": "ruddy-ground-dove",
@@ -111,8 +173,14 @@
       "scientificName": "Columbina talpacoti",
       "frequency": 21.52,
       "description": "Small rufous-brown dove with blue-gray crown and nape. Males are richer rufous; females are paler and browner. Often feeds on ground in pairs or small groups.",
-      "fieldMarks": ["Rufous-brown body", "Blue-gray crown (male)", "Small size", "Black spots on wings"],
-      "habitat": "Open areas, gardens, roadsides, agricultural land"
+      "fieldMarks": [
+        "Rufous-brown body",
+        "Blue-gray crown (male)",
+        "Small size",
+        "Black spots on wings"
+      ],
+      "habitat": "Open areas, gardens, roadsides, agricultural land",
+      "photoCount": 3
     },
     {
       "id": "black-throated-magpie-jay",
@@ -121,18 +189,31 @@
       "scientificName": "Calocitta colliei",
       "frequency": 20.75,
       "description": "Spectacular large jay with long curved crest, very long graduated tail, and striking black-and-white-and-blue pattern. Black throat and upper breast. Very vocal and conspicuous.",
-      "fieldMarks": ["Long curved black crest", "Very long blue tail", "Black throat and breast", "White underparts", "Blue back"],
-      "habitat": "Dry forest, woodland edges, gardens, towns"
+      "fieldMarks": [
+        "Long curved black crest",
+        "Very long blue tail",
+        "Black throat and breast",
+        "White underparts",
+        "Blue back"
+      ],
+      "habitat": "Dry forest, woodland edges, gardens, towns",
+      "photoCount": 3
     },
     {
       "id": "macgillivrays-warbler",
       "rank": 13,
       "commonName": "MacGillivray's Warbler",
       "scientificName": "Geothlypis tolmiei",
-      "frequency": 20.60,
+      "frequency": 20.6,
       "description": "Olive-green warbler with gray hood and bold white eye arcs. Yellow underparts. Skulks in dense vegetation. Similar to Mourning Warbler but with distinct broken eye-ring.",
-      "fieldMarks": ["Gray hood", "Bold white eye arcs (broken eye-ring)", "Yellow underparts", "Olive-green above"],
-      "habitat": "Dense undergrowth, thickets, forest edges"
+      "fieldMarks": [
+        "Gray hood",
+        "Bold white eye arcs (broken eye-ring)",
+        "Yellow underparts",
+        "Olive-green above"
+      ],
+      "habitat": "Dense undergrowth, thickets, forest edges",
+      "photoCount": 3
     },
     {
       "id": "sinaloa-wren",
@@ -141,8 +222,14 @@
       "scientificName": "Thryophilus sinaloa",
       "frequency": 19.68,
       "description": "Plain brown wren with subtle barring on wings and tail. Pale supercilium and whitish underparts. Rich, melodious song. Endemic to western Mexico.",
-      "fieldMarks": ["Brown above", "Pale supercilium", "Whitish underparts", "Barred wings and tail"],
-      "habitat": "Dry forest understory, thickets, woodland edges"
+      "fieldMarks": [
+        "Brown above",
+        "Pale supercilium",
+        "Whitish underparts",
+        "Barred wings and tail"
+      ],
+      "habitat": "Dry forest understory, thickets, woodland edges",
+      "photoCount": 3
     },
     {
       "id": "orange-fronted-parakeet",
@@ -151,8 +238,15 @@
       "scientificName": "Eupsittula canicularis",
       "frequency": 19.54,
       "description": "Small green parakeet with orange forehead and blue crown. Bare white eye-ring. Loud, screechy calls in flight. Often in noisy flocks flying fast over treetops.",
-      "fieldMarks": ["Orange forehead", "Blue crown", "Green body", "Bare white eye-ring", "Noisy flight calls"],
-      "habitat": "Dry forest, woodland, gardens, flying over open areas"
+      "fieldMarks": [
+        "Orange forehead",
+        "Blue crown",
+        "Green body",
+        "Bare white eye-ring",
+        "Noisy flight calls"
+      ],
+      "habitat": "Dry forest, woodland, gardens, flying over open areas",
+      "photoCount": 3
     },
     {
       "id": "cinnamon-rumped-seedeater",
@@ -161,8 +255,15 @@
       "scientificName": "Sporophila torqueola",
       "frequency": 19.25,
       "description": "Tiny seedeater with rounded bill. Males have dark head with white collar and cinnamon rump. Females are plain brown. Often in weedy fields and roadsides.",
-      "fieldMarks": ["Small size", "White collar (male)", "Cinnamon rump (male)", "Dark hood (male)", "Plain brown (female)"],
-      "habitat": "Weedy fields, roadsides, grasslands, marsh edges"
+      "fieldMarks": [
+        "Small size",
+        "White collar (male)",
+        "Cinnamon rump (male)",
+        "Dark hood (male)",
+        "Plain brown (female)"
+      ],
+      "habitat": "Weedy fields, roadsides, grasslands, marsh edges",
+      "photoCount": 3
     },
     {
       "id": "dusky-capped-flycatcher",
@@ -171,8 +272,15 @@
       "scientificName": "Myiarchus tuberculifer",
       "frequency": 16.06,
       "description": "Medium-sized flycatcher with dark cap, olive-gray back, and yellow belly. No rufous in wings or tail. Mournful whistled call. One of the smaller Myiarchus flycatchers.",
-      "fieldMarks": ["Dark dusky cap", "Olive-gray above", "Yellow belly", "No rufous in wings/tail", "Mournful whistle"],
-      "habitat": "Forest edges, woodland, gardens with trees"
+      "fieldMarks": [
+        "Dark dusky cap",
+        "Olive-gray above",
+        "Yellow belly",
+        "No rufous in wings/tail",
+        "Mournful whistle"
+      ],
+      "habitat": "Forest edges, woodland, gardens with trees",
+      "photoCount": 3
     },
     {
       "id": "citreoline-trogon",
@@ -181,8 +289,14 @@
       "scientificName": "Trogon citreolus",
       "frequency": 15.02,
       "description": "Striking trogon with yellow belly, green back, and black-and-white barred tail. Yellow eye-ring. Male has black face and throat; female has gray. Sits motionless for long periods.",
-      "fieldMarks": ["Yellow belly", "Green back", "Barred black-and-white tail", "Yellow eye-ring"],
-      "habitat": "Dry forest, woodland, riparian forest"
+      "fieldMarks": [
+        "Yellow belly",
+        "Green back",
+        "Barred black-and-white tail",
+        "Yellow eye-ring"
+      ],
+      "habitat": "Dry forest, woodland, riparian forest",
+      "photoCount": 3
     },
     {
       "id": "mexican-squirrel-cuckoo",
@@ -191,8 +305,15 @@
       "scientificName": "Piaya mexicana",
       "frequency": 14.76,
       "description": "Large, long-tailed rufous-chestnut cuckoo with gray belly and yellow eye-ring. Moves through vegetation like a squirrel. Red eye-ring. Often silent but gives sharp calls.",
-      "fieldMarks": ["Rich rufous-chestnut above", "Very long tail", "Gray belly", "Yellow orbital skin", "Red eye"],
-      "habitat": "Forest canopy and edges, woodland"
+      "fieldMarks": [
+        "Rich rufous-chestnut above",
+        "Very long tail",
+        "Gray belly",
+        "Yellow orbital skin",
+        "Red eye"
+      ],
+      "habitat": "Forest canopy and edges, woodland",
+      "photoCount": 3
     },
     {
       "id": "mexican-parrotlet",
@@ -201,8 +322,15 @@
       "scientificName": "Forpus cyanopygius",
       "frequency": 13.47,
       "description": "Tiny green parrot with short tail. Males have blue rump and wing patches; females are all green. Often in small flocks giving high-pitched chattering calls.",
-      "fieldMarks": ["Very small size", "Green overall", "Blue rump and wings (male)", "Short tail", "Chattering calls"],
-      "habitat": "Dry forest, woodland edges, gardens"
+      "fieldMarks": [
+        "Very small size",
+        "Green overall",
+        "Blue rump and wings (male)",
+        "Short tail",
+        "Chattering calls"
+      ],
+      "habitat": "Dry forest, woodland edges, gardens",
+      "photoCount": 3
     },
     {
       "id": "ferruginous-pygmy-owl",
@@ -211,18 +339,31 @@
       "scientificName": "Glaucidium brasilianum",
       "frequency": 12.04,
       "description": "Small owl with rufous-brown plumage, streaked crown, and false eye spots on back of head. Active during day. Often detected by mobbing songbirds or its repetitive tooting call.",
-      "fieldMarks": ["Small size", "Rufous-brown color", "Streaked crown", "False eyespots on nape", "Active by day"],
-      "habitat": "Dry forest, woodland, cactus scrub, gardens"
+      "fieldMarks": [
+        "Small size",
+        "Rufous-brown color",
+        "Streaked crown",
+        "False eyespots on nape",
+        "Active by day"
+      ],
+      "habitat": "Dry forest, woodland, cactus scrub, gardens",
+      "photoCount": 3
     },
     {
       "id": "blue-footed-booby",
       "rank": 22,
       "commonName": "Blue-footed Booby",
       "scientificName": "Sula nebouxii",
-      "frequency": 11.70,
+      "frequency": 11.7,
       "description": "Large seabird famous for its bright blue feet used in courtship displays. Brown above with white patches, white below. Long pointed bill. Plunge-dives for fish.",
-      "fieldMarks": ["Bright blue feet", "Brown and white plumage", "Long pointed bill", "Large size"],
-      "habitat": "Coastal waters, rocky islands, offshore"
+      "fieldMarks": [
+        "Bright blue feet",
+        "Brown and white plumage",
+        "Long pointed bill",
+        "Large size"
+      ],
+      "habitat": "Coastal waters, rocky islands, offshore",
+      "photoCount": 3
     },
     {
       "id": "stripe-headed-sparrow",
@@ -231,8 +372,14 @@
       "scientificName": "Peucaea ruficauda",
       "frequency": 10.51,
       "description": "Attractive sparrow with bold black-and-white striped head and rufous back. Plain gray underparts. Often feeds on ground in dry brushy areas.",
-      "fieldMarks": ["Bold black and white head stripes", "Rufous back", "Gray underparts", "Long tail"],
-      "habitat": "Dry scrub, brushy areas, woodland edges"
+      "fieldMarks": [
+        "Bold black and white head stripes",
+        "Rufous back",
+        "Gray underparts",
+        "Long tail"
+      ],
+      "habitat": "Dry scrub, brushy areas, woodland edges",
+      "photoCount": 3
     },
     {
       "id": "west-mexican-euphonia",
@@ -241,18 +388,30 @@
       "scientificName": "Euphonia godmani",
       "frequency": 10.46,
       "description": "Small, compact finch-like bird. Male has blue-black upperparts and yellow underparts with rufous belly. Female is olive-green above with pale yellowish underparts.",
-      "fieldMarks": ["Small compact shape", "Blue-black and yellow (male)", "Rufous lower belly (male)", "Olive-green (female)"],
-      "habitat": "Forest canopy, woodland edges, fruiting trees"
+      "fieldMarks": [
+        "Small compact shape",
+        "Blue-black and yellow (male)",
+        "Rufous lower belly (male)",
+        "Olive-green (female)"
+      ],
+      "habitat": "Forest canopy, woodland edges, fruiting trees",
+      "photoCount": 3
     },
     {
       "id": "short-tailed-hawk",
       "rank": 25,
       "commonName": "Short-tailed Hawk",
       "scientificName": "Buteo brachyurus",
-      "frequency": 9.70,
+      "frequency": 9.7,
       "description": "Small Buteo with two color morphs. Light morph has white underparts with dark hood; dark morph is all dark. Soars over forest edges hunting small birds.",
-      "fieldMarks": ["Small compact Buteo", "Short tail", "Dark hood (light morph)", "White underparts (light morph)"],
-      "habitat": "Forest edges, soaring over canopy and clearings"
+      "fieldMarks": [
+        "Small compact Buteo",
+        "Short tail",
+        "Dark hood (light morph)",
+        "White underparts (light morph)"
+      ],
+      "habitat": "Forest edges, soaring over canopy and clearings",
+      "photoCount": 3
     },
     {
       "id": "blue-black-grassquit",
@@ -261,8 +420,14 @@
       "scientificName": "Volatinia jacarina",
       "frequency": 9.48,
       "description": "Tiny seedeater. Breeding males are glossy blue-black with distinctive display flights. Females and non-breeding males are streaky brown. Common in weedy areas.",
-      "fieldMarks": ["Tiny size", "Glossy blue-black (breeding male)", "Jumping display flight (male)", "Streaky brown (female)"],
-      "habitat": "Weedy fields, roadsides, grasslands, agricultural areas"
+      "fieldMarks": [
+        "Tiny size",
+        "Glossy blue-black (breeding male)",
+        "Jumping display flight (male)",
+        "Streaky brown (female)"
+      ],
+      "habitat": "Weedy fields, roadsides, grasslands, agricultural areas",
+      "photoCount": 3
     },
     {
       "id": "collared-forest-falcon",
@@ -271,8 +436,14 @@
       "scientificName": "Micrastur semitorquatus",
       "frequency": 8.76,
       "description": "Large forest falcon with short rounded wings and long tail. Several color morphs. White collar on nape. Barred tail. Often heard more than seen giving loud yelping calls.",
-      "fieldMarks": ["White collar on nape", "Short rounded wings", "Long barred tail", "Loud yelping calls"],
-      "habitat": "Dense forest interior, forest edges"
+      "fieldMarks": [
+        "White collar on nape",
+        "Short rounded wings",
+        "Long barred tail",
+        "Loud yelping calls"
+      ],
+      "habitat": "Dense forest interior, forest edges",
+      "photoCount": 3
     },
     {
       "id": "blue-mockingbird",
@@ -281,8 +452,15 @@
       "scientificName": "Melanotis caerulescens",
       "frequency": 7.99,
       "description": "Striking blue-gray bird with black mask and red eye. Excellent mimic like other mockingbirds. Often skulks in dense vegetation but can be conspicuous when singing.",
-      "fieldMarks": ["Blue-gray overall", "Black mask", "Red eye", "Long tail", "Mimicking song"],
-      "habitat": "Forest understory, dense thickets, gardens"
+      "fieldMarks": [
+        "Blue-gray overall",
+        "Black mask",
+        "Red eye",
+        "Long tail",
+        "Mimicking song"
+      ],
+      "habitat": "Forest understory, dense thickets, gardens",
+      "photoCount": 3
     },
     {
       "id": "san-blas-jay",
@@ -291,8 +469,15 @@
       "scientificName": "Cyanocorax sanblasianus",
       "frequency": 7.82,
       "description": "Handsome jay with black hood, blue back, and pale blue underparts. Yellow eye and legs. Endemic to western Mexico. Often in noisy family groups.",
-      "fieldMarks": ["Black hood", "Blue back", "Pale blue underparts", "Yellow eye", "Yellow legs"],
-      "habitat": "Dry forest, woodland, forest edges"
+      "fieldMarks": [
+        "Black hood",
+        "Blue back",
+        "Pale blue underparts",
+        "Yellow eye",
+        "Yellow legs"
+      ],
+      "habitat": "Dry forest, woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "laughing-falcon",
@@ -301,8 +486,14 @@
       "scientificName": "Herpetotheres cachinnans",
       "frequency": 7.58,
       "description": "Distinctive falcon with buffy head, dark mask, and barred wings and tail. Named for its loud laughing calls that accelerate and rise in pitch. Snake specialist.",
-      "fieldMarks": ["Buffy head with dark mask", "Barred wings and tail", "Heavy head", "Loud laughing calls"],
-      "habitat": "Forest edges, woodland, semi-open areas"
+      "fieldMarks": [
+        "Buffy head with dark mask",
+        "Barred wings and tail",
+        "Heavy head",
+        "Loud laughing calls"
+      ],
+      "habitat": "Forest edges, woodland, semi-open areas",
+      "photoCount": 3
     },
     {
       "id": "coppery-tailed-trogon",
@@ -311,8 +502,14 @@
       "scientificName": "Trogon elegans",
       "frequency": 7.18,
       "description": "Colorful trogon with red belly, green back, and coppery tail. Male has black face and green chest; female has gray face and chest. White chest band. Sits motionless.",
-      "fieldMarks": ["Red belly", "Green back", "Coppery tail", "White chest band"],
-      "habitat": "Dry forest, woodland, riparian areas"
+      "fieldMarks": [
+        "Red belly",
+        "Green back",
+        "Coppery tail",
+        "White chest band"
+      ],
+      "habitat": "Dry forest, woodland, riparian areas",
+      "photoCount": 3
     },
     {
       "id": "golden-vireo",
@@ -321,18 +518,31 @@
       "scientificName": "Vireo hypochryseus",
       "frequency": 6.73,
       "description": "Bright yellow vireo with olive-green back and no wing bars. Yellow supercilium and underparts. Endemic to western Mexico. Active in forest canopy.",
-      "fieldMarks": ["Bright yellow underparts", "Yellow supercilium", "Olive-green back", "No wing bars"],
-      "habitat": "Forest canopy, woodland, forest edges"
+      "fieldMarks": [
+        "Bright yellow underparts",
+        "Yellow supercilium",
+        "Olive-green back",
+        "No wing bars"
+      ],
+      "habitat": "Forest canopy, woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "gray-breasted-martin",
       "rank": 33,
       "commonName": "Gray-breasted Martin",
       "scientificName": "Progne chalybea",
-      "frequency": 5.70,
+      "frequency": 5.7,
       "description": "Large swallow with glossy blue-black upperparts and gray breast fading to white belly. Forked tail. Often nests in buildings. Catches insects in graceful flight.",
-      "fieldMarks": ["Gray breast", "White belly", "Glossy blue-black above", "Forked tail", "Large size for swallow"],
-      "habitat": "Towns, open areas near buildings, flying over fields"
+      "fieldMarks": [
+        "Gray breast",
+        "White belly",
+        "Glossy blue-black above",
+        "Forked tail",
+        "Large size for swallow"
+      ],
+      "habitat": "Towns, open areas near buildings, flying over fields",
+      "photoCount": 3
     },
     {
       "id": "berylline-hummingbird",
@@ -341,8 +551,14 @@
       "scientificName": "Saucerottia beryllina",
       "frequency": 5.42,
       "description": "Green hummingbird with rufous in wings and tail. Grayish belly with green chest. Red-based bill. Aggressive at feeders. Found at middle and higher elevations.",
-      "fieldMarks": ["Green overall", "Rufous wings and tail", "Gray belly", "Red base to bill"],
-      "habitat": "Mountain forest edges, gardens with flowers"
+      "fieldMarks": [
+        "Green overall",
+        "Rufous wings and tail",
+        "Gray belly",
+        "Red base to bill"
+      ],
+      "habitat": "Mountain forest edges, gardens with flowers",
+      "photoCount": 3
     },
     {
       "id": "boat-billed-heron",
@@ -351,8 +567,15 @@
       "scientificName": "Cochlearius cochlearius",
       "frequency": 5.32,
       "description": "Bizarre heron with massive broad scoop-like bill. Gray and black above with rufous belly. Large dark eyes for nocturnal hunting. Often roosts in dense vegetation.",
-      "fieldMarks": ["Massive flat bill", "Large dark eyes", "Rufous belly", "Black crown", "Nocturnal"],
-      "habitat": "Mangroves, wooded swamps, stream edges"
+      "fieldMarks": [
+        "Massive flat bill",
+        "Large dark eyes",
+        "Rufous belly",
+        "Black crown",
+        "Nocturnal"
+      ],
+      "habitat": "Mangroves, wooded swamps, stream edges",
+      "photoCount": 3
     },
     {
       "id": "orange-billed-nightingale-thrush",
@@ -361,8 +584,15 @@
       "scientificName": "Catharus aurantiirostris",
       "frequency": 5.27,
       "description": "Small thrush with orange bill and legs, gray-brown above and pale below with grayish breast. Beautiful flute-like song usually heard at dawn and dusk.",
-      "fieldMarks": ["Bright orange bill", "Orange legs", "Gray-brown above", "Pale underparts", "Flute-like song"],
-      "habitat": "Forest understory, shaded ravines, coffee plantations"
+      "fieldMarks": [
+        "Bright orange bill",
+        "Orange legs",
+        "Gray-brown above",
+        "Pale underparts",
+        "Flute-like song"
+      ],
+      "habitat": "Forest understory, shaded ravines, coffee plantations",
+      "photoCount": 3
     },
     {
       "id": "russet-crowned-motmot",
@@ -371,8 +601,15 @@
       "scientificName": "Momotus mexicanus",
       "frequency": 5.24,
       "description": "Beautiful bird with rufous crown, turquoise eyebrow, and long racquet-tipped tail. Green back and blue flight feathers. Sits motionless then swings tail like pendulum.",
-      "fieldMarks": ["Rufous crown", "Turquoise eyebrow", "Racquet-tipped tail", "Green and blue plumage", "Tail swinging behavior"],
-      "habitat": "Dry forest, woodland, ravines, gardens"
+      "fieldMarks": [
+        "Rufous crown",
+        "Turquoise eyebrow",
+        "Racquet-tipped tail",
+        "Green and blue plumage",
+        "Tail swinging behavior"
+      ],
+      "habitat": "Dry forest, woodland, ravines, gardens",
+      "photoCount": 3
     },
     {
       "id": "brown-backed-solitaire",
@@ -381,18 +618,31 @@
       "scientificName": "Myadestes occidentalis",
       "frequency": 5.01,
       "description": "Shy thrush with brown back, gray underparts, and white eye-ring. Famous for extraordinarily beautiful flute-like song. Often heard but difficult to see.",
-      "fieldMarks": ["Brown back", "Gray underparts", "White eye-ring", "Upright posture", "Beautiful song"],
-      "habitat": "Mountain forest, pine-oak woodland, shaded ravines"
+      "fieldMarks": [
+        "Brown back",
+        "Gray underparts",
+        "White eye-ring",
+        "Upright posture",
+        "Beautiful song"
+      ],
+      "habitat": "Mountain forest, pine-oak woodland, shaded ravines",
+      "photoCount": 3
     },
     {
       "id": "tufted-flycatcher",
       "rank": 39,
       "commonName": "Tufted Flycatcher",
       "scientificName": "Mitrephanes phaeocercus",
-      "frequency": 5.00,
+      "frequency": 5.0,
       "description": "Small flycatcher with distinctive pointed crest and orange-cinnamon underparts. Olive-brown above with wing bars. Active and often in pairs. Higher elevation species.",
-      "fieldMarks": ["Pointed crest", "Orange-cinnamon underparts", "Olive-brown above", "Wing bars"],
-      "habitat": "Pine-oak forest, mountain woodland, forest edges"
+      "fieldMarks": [
+        "Pointed crest",
+        "Orange-cinnamon underparts",
+        "Olive-brown above",
+        "Wing bars"
+      ],
+      "habitat": "Pine-oak forest, mountain woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "cocos-booby",
@@ -401,8 +651,14 @@
       "scientificName": "Sula brewsteri",
       "frequency": 4.89,
       "description": "Large seabird similar to Brown Booby but with white belly extending higher. Breeds on offshore islands. Plunge-dives for fish. Recently split from Brown Booby.",
-      "fieldMarks": ["Brown above", "White belly", "Blue facial skin", "Long pointed bill"],
-      "habitat": "Coastal waters, offshore islands"
+      "fieldMarks": [
+        "Brown above",
+        "White belly",
+        "Blue facial skin",
+        "Long pointed bill"
+      ],
+      "habitat": "Coastal waters, offshore islands",
+      "photoCount": 3
     },
     {
       "id": "fan-tailed-warbler",
@@ -411,8 +667,14 @@
       "scientificName": "Basileuterus lachrymosus",
       "frequency": 4.36,
       "description": "Active warbler with distinctive head pattern - yellow crown stripe bordered by black, and white supercilium. Yellow underparts. Frequently fans its tail.",
-      "fieldMarks": ["Yellow crown stripe", "White supercilium", "Yellow underparts", "Tail-fanning behavior"],
-      "habitat": "Dense understory near streams, ravines, forest"
+      "fieldMarks": [
+        "Yellow crown stripe",
+        "White supercilium",
+        "Yellow underparts",
+        "Tail-fanning behavior"
+      ],
+      "habitat": "Dense understory near streams, ravines, forest",
+      "photoCount": 3
     },
     {
       "id": "white-throated-thrush",
@@ -421,8 +683,14 @@
       "scientificName": "Turdus assimilis",
       "frequency": 4.24,
       "description": "Dark thrush with slate-gray upperparts, white throat with dark streaks, and rufous-orange belly. Yellow eye-ring and bill. Often feeds on ground in shade.",
-      "fieldMarks": ["White streaked throat", "Rufous-orange belly", "Slate-gray above", "Yellow eye-ring and bill"],
-      "habitat": "Forest, woodland, gardens, coffee plantations"
+      "fieldMarks": [
+        "White streaked throat",
+        "Rufous-orange belly",
+        "Slate-gray above",
+        "Yellow eye-ring and bill"
+      ],
+      "habitat": "Forest, woodland, gardens, coffee plantations",
+      "photoCount": 3
     },
     {
       "id": "greenish-elaenia",
@@ -431,18 +699,30 @@
       "scientificName": "Myiopagis viridicata",
       "frequency": 4.15,
       "description": "Small flycatcher with olive-green upperparts, yellow belly, and concealed yellow crown patch. White eye-ring. Often sluggish and easily overlooked in canopy.",
-      "fieldMarks": ["Olive-green above", "Yellow belly", "White eye-ring", "Hidden yellow crown patch"],
-      "habitat": "Forest canopy, woodland, forest edges"
+      "fieldMarks": [
+        "Olive-green above",
+        "Yellow belly",
+        "White eye-ring",
+        "Hidden yellow crown patch"
+      ],
+      "habitat": "Forest canopy, woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "snail-kite",
       "rank": 44,
       "commonName": "Snail Kite",
       "scientificName": "Rostrhamus sociabilis",
-      "frequency": 4.10,
+      "frequency": 4.1,
       "description": "Slender raptor with deeply curved bill specialized for eating apple snails. Males are dark slate with red legs and face; females are brown with streaked underparts.",
-      "fieldMarks": ["Deeply curved bill", "Red legs and face (male)", "Dark slate (male)", "Streaked brown (female)"],
-      "habitat": "Freshwater marshes, lake edges with snails"
+      "fieldMarks": [
+        "Deeply curved bill",
+        "Red legs and face (male)",
+        "Dark slate (male)",
+        "Streaked brown (female)"
+      ],
+      "habitat": "Freshwater marshes, lake edges with snails",
+      "photoCount": 3
     },
     {
       "id": "elegant-quail",
@@ -451,8 +731,14 @@
       "scientificName": "Callipepla douglasii",
       "frequency": 4.09,
       "description": "Handsome quail with scaled underparts and golden-brown crest curving forward. Gray and rufous plumage with intricate pattern. Endemic to western Mexico. Often in coveys.",
-      "fieldMarks": ["Forward-curving crest", "Scaled underparts", "Gray and rufous pattern", "Endemic to western Mexico"],
-      "habitat": "Dry scrub, brushy hillsides, woodland edges"
+      "fieldMarks": [
+        "Forward-curving crest",
+        "Scaled underparts",
+        "Gray and rufous pattern",
+        "Endemic to western Mexico"
+      ],
+      "habitat": "Dry scrub, brushy hillsides, woodland edges",
+      "photoCount": 3
     },
     {
       "id": "colima-pygmy-owl",
@@ -461,8 +747,15 @@
       "scientificName": "Glaucidium palmarum",
       "frequency": 3.85,
       "description": "Small owl similar to Ferruginous Pygmy-Owl but grayer and less rufous. Active during day. Has false eyespots on back of head. Often detected by repetitive tooting calls.",
-      "fieldMarks": ["Small size", "Gray-brown overall", "False eyespots on nape", "Active by day", "Tooting calls"],
-      "habitat": "Dry forest, thorn forest, woodland"
+      "fieldMarks": [
+        "Small size",
+        "Gray-brown overall",
+        "False eyespots on nape",
+        "Active by day",
+        "Tooting calls"
+      ],
+      "habitat": "Dry forest, thorn forest, woodland",
+      "photoCount": 3
     },
     {
       "id": "white-eared-hummingbird",
@@ -471,8 +764,14 @@
       "scientificName": "Basilinna leucotis",
       "frequency": 3.69,
       "description": "Small hummingbird with bold white ear stripe. Male has violet-blue crown and green throat; female is green above with spotted underparts. Often at higher elevations.",
-      "fieldMarks": ["Bold white ear stripe", "Violet-blue crown (male)", "Green throat (male)", "Spotted underparts (female)"],
-      "habitat": "Pine-oak forest, mountain meadows, forest edges"
+      "fieldMarks": [
+        "Bold white ear stripe",
+        "Violet-blue crown (male)",
+        "Green throat (male)",
+        "Spotted underparts (female)"
+      ],
+      "habitat": "Pine-oak forest, mountain meadows, forest edges",
+      "photoCount": 3
     },
     {
       "id": "rusty-crowned-ground-sparrow",
@@ -481,8 +780,14 @@
       "scientificName": "Melozone kieneri",
       "frequency": 3.37,
       "description": "Large sparrow with rufous crown and nape, white throat, and gray breast with dark central spot. White eye-ring. Endemic to western Mexico. Feeds on ground in pairs.",
-      "fieldMarks": ["Rufous crown and nape", "White throat", "Gray breast with dark spot", "White eye-ring"],
-      "habitat": "Dry forest understory, brushy areas, woodland edges"
+      "fieldMarks": [
+        "Rufous crown and nape",
+        "White throat",
+        "Gray breast with dark spot",
+        "White eye-ring"
+      ],
+      "habitat": "Dry forest understory, brushy areas, woodland edges",
+      "photoCount": 3
     },
     {
       "id": "white-throated-flycatcher",
@@ -491,8 +796,15 @@
       "scientificName": "Empidonax albigularis",
       "frequency": 3.28,
       "description": "Small Empidonax flycatcher with white throat, olive-brown upperparts, and yellowish belly. Eye-ring and wing bars. Often near streams in mountains.",
-      "fieldMarks": ["White throat", "Olive-brown above", "Yellowish belly", "Eye-ring", "Wing bars"],
-      "habitat": "Stream edges, wet areas in mountain forest"
+      "fieldMarks": [
+        "White throat",
+        "Olive-brown above",
+        "Yellowish belly",
+        "Eye-ring",
+        "Wing bars"
+      ],
+      "habitat": "Stream edges, wet areas in mountain forest",
+      "photoCount": 3
     },
     {
       "id": "nuttings-flycatcher",
@@ -501,8 +813,14 @@
       "scientificName": "Myiarchus nuttingi",
       "frequency": 3.27,
       "description": "Medium-sized Myiarchus flycatcher with gray throat and breast, yellow belly, and rufous in tail. Very similar to Ash-throated but with different call and mouth color.",
-      "fieldMarks": ["Gray throat and breast", "Yellow belly", "Rufous in tail", "Orange mouth lining"],
-      "habitat": "Dry forest, thorn scrub, woodland edges"
+      "fieldMarks": [
+        "Gray throat and breast",
+        "Yellow belly",
+        "Rufous in tail",
+        "Orange mouth lining"
+      ],
+      "habitat": "Dry forest, thorn scrub, woodland edges",
+      "photoCount": 3
     },
     {
       "id": "yellow-grosbeak",
@@ -511,8 +829,14 @@
       "scientificName": "Pheucticus chrysopeplus",
       "frequency": 3.21,
       "description": "Large finch with massive pale bill. Males are bright golden-yellow with black wings and white wing patches. Females are olive-yellow and streaked. Loud whistled song.",
-      "fieldMarks": ["Large pale bill", "Bright yellow (male)", "Black wings with white patches", "Olive-yellow streaked (female)"],
-      "habitat": "Forest edges, woodland, gardens with trees"
+      "fieldMarks": [
+        "Large pale bill",
+        "Bright yellow (male)",
+        "Black wings with white patches",
+        "Olive-yellow streaked (female)"
+      ],
+      "habitat": "Forest edges, woodland, gardens with trees",
+      "photoCount": 3
     },
     {
       "id": "cassins-vireo",
@@ -521,8 +845,14 @@
       "scientificName": "Vireo cassinii",
       "frequency": 3.18,
       "description": "Gray-headed vireo with olive back, white spectacles, and two white wing bars. Yellow flanks. Winter visitor from western North America. Deliberate foraging style.",
-      "fieldMarks": ["Gray head", "Bold white spectacles", "White wing bars", "Yellow flanks"],
-      "habitat": "Oak woodland, forest edges, gardens with trees"
+      "fieldMarks": [
+        "Gray head",
+        "Bold white spectacles",
+        "White wing bars",
+        "Yellow flanks"
+      ],
+      "habitat": "Oak woodland, forest edges, gardens with trees",
+      "photoCount": 3
     },
     {
       "id": "gray-crowned-woodpecker",
@@ -531,8 +861,15 @@
       "scientificName": "Colaptes auricularis",
       "frequency": 3.05,
       "description": "Large woodpecker with gray crown and nape, golden-olive back, and barred underparts. Red moustache stripe (male). Pale eye. Often feeds on ground like flicker.",
-      "fieldMarks": ["Gray crown", "Golden-olive back", "Barred underparts", "Red moustache (male)", "Pale eye"],
-      "habitat": "Pine-oak forest, mountain woodland, forest edges"
+      "fieldMarks": [
+        "Gray crown",
+        "Golden-olive back",
+        "Barred underparts",
+        "Red moustache (male)",
+        "Pale eye"
+      ],
+      "habitat": "Pine-oak forest, mountain woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "purplish-backed-jay",
@@ -541,8 +878,14 @@
       "scientificName": "Cyanocorax beecheii",
       "frequency": 2.86,
       "description": "Striking jay with black hood, purplish-blue back, and yellow underparts. Yellow eye. Endemic to western Mexico. Often in noisy family groups.",
-      "fieldMarks": ["Black hood", "Purplish-blue back", "Yellow underparts", "Yellow eye"],
-      "habitat": "Dry forest, woodland, forest edges"
+      "fieldMarks": [
+        "Black hood",
+        "Purplish-blue back",
+        "Yellow underparts",
+        "Yellow eye"
+      ],
+      "habitat": "Dry forest, woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "orange-breasted-bunting",
@@ -551,8 +894,14 @@
       "scientificName": "Passerina leclancherii",
       "frequency": 2.85,
       "description": "Stunning bunting endemic to western Mexico. Male has turquoise-blue upperparts, yellow-green crown, and orange breast. Female is greenish-yellow. Often in weedy areas.",
-      "fieldMarks": ["Turquoise-blue back (male)", "Orange breast (male)", "Yellow-green crown (male)", "Greenish-yellow (female)"],
-      "habitat": "Brushy areas, dry scrub, weedy fields, forest edges"
+      "fieldMarks": [
+        "Turquoise-blue back (male)",
+        "Orange breast (male)",
+        "Yellow-green crown (male)",
+        "Greenish-yellow (female)"
+      ],
+      "habitat": "Brushy areas, dry scrub, weedy fields, forest edges",
+      "photoCount": 3
     },
     {
       "id": "mexican-woodnymph",
@@ -561,8 +910,14 @@
       "scientificName": "Eupherusa ridgwayi",
       "frequency": 2.83,
       "description": "Medium-sized hummingbird with distinctive white vent. Male is glittering green with violet-blue crown. Female has gray underparts. Endemic to western Mexico.",
-      "fieldMarks": ["White vent", "Glittering green (male)", "Violet-blue crown (male)", "Gray underparts (female)"],
-      "habitat": "Humid forest, forest edges, mountain slopes"
+      "fieldMarks": [
+        "White vent",
+        "Glittering green (male)",
+        "Violet-blue crown (male)",
+        "Gray underparts (female)"
+      ],
+      "habitat": "Humid forest, forest edges, mountain slopes",
+      "photoCount": 3
     },
     {
       "id": "white-fronted-amazon",
@@ -571,8 +926,15 @@
       "scientificName": "Amazona albifrons",
       "frequency": 2.72,
       "description": "Small green parrot with white forehead and red around eye and on wing. Male has red on shoulders. Often in noisy flocks flying over at dawn and dusk.",
-      "fieldMarks": ["White forehead", "Red around eye", "Red on wing", "Green body", "Noisy flocks"],
-      "habitat": "Dry forest, woodland, flying over open areas"
+      "fieldMarks": [
+        "White forehead",
+        "Red around eye",
+        "Red on wing",
+        "Green body",
+        "Noisy flocks"
+      ],
+      "habitat": "Dry forest, woodland, flying over open areas",
+      "photoCount": 3
     },
     {
       "id": "gray-silky-flycatcher",
@@ -581,8 +943,14 @@
       "scientificName": "Ptiliogonys cinereus",
       "frequency": 2.68,
       "description": "Elegant bird with tall pointed crest, gray body, and yellow undertail. Long tail with white outer feathers. Often in flocks feeding on berries or catching insects.",
-      "fieldMarks": ["Tall pointed crest", "Gray body", "Yellow undertail", "White outer tail feathers"],
-      "habitat": "Pine-oak forest, mountain woodland, forest edges"
+      "fieldMarks": [
+        "Tall pointed crest",
+        "Gray body",
+        "Yellow undertail",
+        "White outer tail feathers"
+      ],
+      "habitat": "Pine-oak forest, mountain woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "great-black-hawk",
@@ -591,8 +959,14 @@
       "scientificName": "Buteogallus urubitinga",
       "frequency": 2.64,
       "description": "Large black hawk with single white tail band. Yellow cere and legs. Immature is streaky brown. Often perches near water hunting for crabs, fish, and reptiles.",
-      "fieldMarks": ["All black with white tail band", "Yellow cere and legs", "Large size", "Often near water"],
-      "habitat": "Forest near water, mangroves, rivers, wetland edges"
+      "fieldMarks": [
+        "All black with white tail band",
+        "Yellow cere and legs",
+        "Large size",
+        "Often near water"
+      ],
+      "habitat": "Forest near water, mangroves, rivers, wetland edges",
+      "photoCount": 3
     },
     {
       "id": "rufous-capped-warbler",
@@ -601,8 +975,14 @@
       "scientificName": "Basileuterus rufifrons",
       "frequency": 2.61,
       "description": "Active warbler with rufous cap and cheeks, white supercilium, and yellow underparts. Often holds tail cocked. Constantly moving through low vegetation.",
-      "fieldMarks": ["Rufous cap and cheeks", "White supercilium", "Yellow underparts", "Cocked tail"],
-      "habitat": "Brushy hillsides, forest edges, dense second growth"
+      "fieldMarks": [
+        "Rufous cap and cheeks",
+        "White supercilium",
+        "Yellow underparts",
+        "Cocked tail"
+      ],
+      "habitat": "Brushy hillsides, forest edges, dense second growth",
+      "photoCount": 3
     },
     {
       "id": "golden-crowned-emerald",
@@ -611,8 +991,14 @@
       "scientificName": "Cynanthus auriceps",
       "frequency": 2.56,
       "description": "Endemic hummingbird with golden-green crown, straight red bill with dark tip. Bronzy-green above, whitish below. Male has glittering throat. Recently split as endemic species.",
-      "fieldMarks": ["Golden-green crown", "Red bill with dark tip", "Whitish below", "Bronzy-green above"],
-      "habitat": "Dry forest, woodland edges, gardens"
+      "fieldMarks": [
+        "Golden-green crown",
+        "Red bill with dark tip",
+        "Whitish below",
+        "Bronzy-green above"
+      ],
+      "habitat": "Dry forest, woodland edges, gardens",
+      "photoCount": 3
     },
     {
       "id": "crane-hawk",
@@ -621,8 +1007,14 @@
       "scientificName": "Geranospiza caerulescens",
       "frequency": 2.42,
       "description": "Slender gray hawk with long orange legs and unique double-jointed knees for probing tree cavities. White tail bands. Often seen reaching into holes for prey.",
-      "fieldMarks": ["Slender gray body", "Long orange legs", "White tail bands", "Probing behavior"],
-      "habitat": "Forest, woodland, often near water"
+      "fieldMarks": [
+        "Slender gray body",
+        "Long orange legs",
+        "White tail bands",
+        "Probing behavior"
+      ],
+      "habitat": "Forest, woodland, often near water",
+      "photoCount": 3
     },
     {
       "id": "rosy-thrush-tanager",
@@ -631,8 +1023,14 @@
       "scientificName": "Rhodinocichla rosea",
       "frequency": 2.41,
       "description": "Secretive but beautiful bird. Male has black upperparts with rosy-pink underparts and supercilium. Female is brown with buff supercilium. Loud distinctive song.",
-      "fieldMarks": ["Rosy-pink underparts (male)", "Black upperparts (male)", "Bold supercilium", "Loud song"],
-      "habitat": "Dense undergrowth, thickets, forest edges"
+      "fieldMarks": [
+        "Rosy-pink underparts (male)",
+        "Black upperparts (male)",
+        "Bold supercilium",
+        "Loud song"
+      ],
+      "habitat": "Dense undergrowth, thickets, forest edges",
+      "photoCount": 3
     },
     {
       "id": "black-vented-oriole",
@@ -641,8 +1039,14 @@
       "scientificName": "Icterus wagleri",
       "frequency": 2.35,
       "description": "Striking oriole with orange body, black hood extending to upper back, and black wings and tail. Black vent area. Endemic to Mexico and Central America.",
-      "fieldMarks": ["Orange body", "Black hood extending to back", "Black vent", "Black wings and tail"],
-      "habitat": "Pine-oak forest, mountain woodland, forest edges"
+      "fieldMarks": [
+        "Orange body",
+        "Black hood extending to back",
+        "Black vent",
+        "Black wings and tail"
+      ],
+      "habitat": "Pine-oak forest, mountain woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "lucys-warbler",
@@ -651,18 +1055,30 @@
       "scientificName": "Leiothlypis luciae",
       "frequency": 2.35,
       "description": "Tiny pale gray warbler with rufous rump and rufous crown patch (often hidden). Whitish underparts. One of the smallest warblers. Often in mesquite and riparian areas.",
-      "fieldMarks": ["Pale gray overall", "Rufous rump", "Rufous crown patch (often hidden)", "Very small size"],
-      "habitat": "Dry scrub, mesquite woodland, riparian areas"
+      "fieldMarks": [
+        "Pale gray overall",
+        "Rufous rump",
+        "Rufous crown patch (often hidden)",
+        "Very small size"
+      ],
+      "habitat": "Dry scrub, mesquite woodland, riparian areas",
+      "photoCount": 3
     },
     {
       "id": "flame-colored-tanager",
       "rank": 66,
       "commonName": "Flame-colored Tanager",
       "scientificName": "Piranga bidentata",
-      "frequency": 2.10,
+      "frequency": 2.1,
       "description": "Brilliant tanager with flame-orange body (male) and streaked back. White wing bars. Female is olive-yellow with streaked back. Found in mountain forests.",
-      "fieldMarks": ["Flame-orange (male)", "Streaked back", "White wing bars", "Olive-yellow (female)"],
-      "habitat": "Pine-oak forest, mountain woodland, forest edges"
+      "fieldMarks": [
+        "Flame-orange (male)",
+        "Streaked back",
+        "White wing bars",
+        "Olive-yellow (female)"
+      ],
+      "habitat": "Pine-oak forest, mountain woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "violet-crowned-hummingbird",
@@ -671,8 +1087,14 @@
       "scientificName": "Ramosomyia violiceps",
       "frequency": 2.03,
       "description": "Distinctive hummingbird with violet-blue crown, snow-white underparts, and red bill. No green on underparts. Immatures have dusky crown. Often at feeders.",
-      "fieldMarks": ["Violet-blue crown", "Snow-white underparts", "Red bill", "Bronzy-green back"],
-      "habitat": "Riparian woodland, canyons, gardens with feeders"
+      "fieldMarks": [
+        "Violet-blue crown",
+        "Snow-white underparts",
+        "Red bill",
+        "Bronzy-green back"
+      ],
+      "habitat": "Riparian woodland, canyons, gardens with feeders",
+      "photoCount": 3
     },
     {
       "id": "black-capped-gnatcatcher",
@@ -681,8 +1103,14 @@
       "scientificName": "Polioptila nigriceps",
       "frequency": 1.95,
       "description": "Tiny gray bird with long tail. Breeding male has black cap; female and non-breeding male have gray crown. White eye-ring. Active in dry scrub.",
-      "fieldMarks": ["Black cap (breeding male)", "Long tail with white edges", "Tiny size", "White eye-ring"],
-      "habitat": "Dry thorn scrub, desert edges, dry woodland"
+      "fieldMarks": [
+        "Black cap (breeding male)",
+        "Long tail with white edges",
+        "Tiny size",
+        "White eye-ring"
+      ],
+      "habitat": "Dry thorn scrub, desert edges, dry woodland",
+      "photoCount": 3
     },
     {
       "id": "lilac-crowned-amazon",
@@ -691,8 +1119,15 @@
       "scientificName": "Amazona finschi",
       "frequency": 1.93,
       "description": "Green parrot with lilac crown and forehead, red forehead patch, and pale bill. Endemic to western Mexico. Often in noisy flocks. Threatened by habitat loss.",
-      "fieldMarks": ["Lilac crown", "Red forehead", "Green body", "Pale bill", "Endemic species"],
-      "habitat": "Dry forest, woodland, flying over open areas"
+      "fieldMarks": [
+        "Lilac crown",
+        "Red forehead",
+        "Green body",
+        "Pale bill",
+        "Endemic species"
+      ],
+      "habitat": "Dry forest, woodland, flying over open areas",
+      "photoCount": 3
     },
     {
       "id": "muscovy-duck",
@@ -701,18 +1136,31 @@
       "scientificName": "Cairina moschata",
       "frequency": 1.91,
       "description": "Large dark duck with white wing patches visible in flight. Wild birds have bare red facial skin and knob on bill. Often perches in trees. Domestic birds vary widely.",
-      "fieldMarks": ["Large dark body", "White wing patches", "Red facial skin", "Perches in trees"],
-      "habitat": "Forested wetlands, rivers, ponds, mangroves"
+      "fieldMarks": [
+        "Large dark body",
+        "White wing patches",
+        "Red facial skin",
+        "Perches in trees"
+      ],
+      "habitat": "Forested wetlands, rivers, ponds, mangroves",
+      "photoCount": 3
     },
     {
       "id": "ruddy-breasted-seedeater",
       "rank": 71,
       "commonName": "Ruddy-breasted Seedeater",
       "scientificName": "Sporophila minuta",
-      "frequency": 1.90,
+      "frequency": 1.9,
       "description": "Tiny seedeater. Males have rufous underparts, gray head, and small pale bill. Females are plain brown. Found in weedy areas and grasslands.",
-      "fieldMarks": ["Rufous underparts (male)", "Gray head (male)", "Small pale bill", "Plain brown (female)", "Very small size"],
-      "habitat": "Weedy fields, grasslands, marsh edges"
+      "fieldMarks": [
+        "Rufous underparts (male)",
+        "Gray head (male)",
+        "Small pale bill",
+        "Plain brown (female)",
+        "Very small size"
+      ],
+      "habitat": "Weedy fields, grasslands, marsh edges",
+      "photoCount": 3
     },
     {
       "id": "rufous-necked-wood-rail",
@@ -721,8 +1169,15 @@
       "scientificName": "Aramides axillaris",
       "frequency": 1.86,
       "description": "Secretive rail with rufous head and neck, olive-brown back, and gray underparts. Red eye, greenish bill, and red legs. Often heard more than seen in mangroves.",
-      "fieldMarks": ["Rufous head and neck", "Gray underparts", "Red eye", "Red legs", "Greenish bill"],
-      "habitat": "Mangroves, coastal wetlands, flooded forest"
+      "fieldMarks": [
+        "Rufous head and neck",
+        "Gray underparts",
+        "Red eye",
+        "Red legs",
+        "Greenish bill"
+      ],
+      "habitat": "Mangroves, coastal wetlands, flooded forest",
+      "photoCount": 3
     },
     {
       "id": "black-headed-siskin",
@@ -731,8 +1186,14 @@
       "scientificName": "Spinus notatus",
       "frequency": 1.79,
       "description": "Small finch with black hood (male), yellow wing bars, and yellow patches in wings and tail. Female has olive head with streaking. Often in small flocks in pines.",
-      "fieldMarks": ["Black hood (male)", "Yellow wing bars", "Yellow in wings and tail", "Olive streaked (female)"],
-      "habitat": "Pine-oak forest, mountain woodland, forest edges"
+      "fieldMarks": [
+        "Black hood (male)",
+        "Yellow wing bars",
+        "Yellow in wings and tail",
+        "Olive streaked (female)"
+      ],
+      "habitat": "Pine-oak forest, mountain woodland, forest edges",
+      "photoCount": 3
     },
     {
       "id": "plain-capped-starthroat",
@@ -741,8 +1202,14 @@
       "scientificName": "Heliomaster constantii",
       "frequency": 1.77,
       "description": "Large hummingbird with very long bill, white moustache stripe, and purple gorget. White patch on lower back visible in flight. Often perches conspicuously.",
-      "fieldMarks": ["Very long bill", "White moustache stripe", "Purple gorget", "White lower back patch"],
-      "habitat": "Dry forest, woodland edges, gardens, open areas"
+      "fieldMarks": [
+        "Very long bill",
+        "White moustache stripe",
+        "Purple gorget",
+        "White lower back patch"
+      ],
+      "habitat": "Dry forest, woodland edges, gardens, open areas",
+      "photoCount": 3
     },
     {
       "id": "lesser-ground-cuckoo",
@@ -751,8 +1218,15 @@
       "scientificName": "Morococcyx erythropygus",
       "frequency": 1.68,
       "description": "Secretive ground-dwelling cuckoo with long tail, buff underparts, and blue eye-ring. Rufous wings visible in flight. Runs on ground through dense vegetation.",
-      "fieldMarks": ["Long tail", "Buff underparts", "Blue eye-ring", "Rufous wings", "Ground-dwelling"],
-      "habitat": "Dense undergrowth, dry forest floor, thickets"
+      "fieldMarks": [
+        "Long tail",
+        "Buff underparts",
+        "Blue eye-ring",
+        "Rufous wings",
+        "Ground-dwelling"
+      ],
+      "habitat": "Dense undergrowth, dry forest floor, thickets",
+      "photoCount": 3
     }
   ]
 }

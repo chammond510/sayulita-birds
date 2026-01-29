@@ -61,13 +61,25 @@ const BirdData = {
         return shuffled.slice(0, count);
     },
 
-    // Generate photo URL from Wikimedia Commons
+    // Get primary photo URL
     getPhotoUrl(bird) {
-        // First check for cached local photo
-        const localPath = `assets/images/birds/${bird.id}.jpg`;
+        return `assets/images/birds/${bird.id}.jpg`;
+    },
 
-        // Return local path - the app will handle fallback if it doesn't exist
-        return localPath;
+    // Get all photo URLs for a bird
+    getPhotoUrls(bird) {
+        const count = bird.photoCount || 1;
+        const urls = [`assets/images/birds/${bird.id}.jpg`];
+        for (let i = 2; i <= count; i++) {
+            urls.push(`assets/images/birds/${bird.id}-${i}.jpg`);
+        }
+        return urls;
+    },
+
+    // Get a random photo URL (for quiz variety)
+    getRandomPhotoUrl(bird) {
+        const urls = this.getPhotoUrls(bird);
+        return urls[Math.floor(Math.random() * urls.length)];
     },
 
     // Generate Wikimedia Commons search URL for fallback

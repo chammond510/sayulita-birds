@@ -97,7 +97,7 @@ const Quiz = {
         this.shuffleArray(this.photo.options);
 
         // Update UI
-        this.elements.photoQuiz.photo.src = BirdData.getPhotoUrl(this.photo.currentBird);
+        this.elements.photoQuiz.photo.src = BirdData.getRandomPhotoUrl(this.photo.currentBird);
         this.elements.photoQuiz.photo.alt = 'Identify this bird';
         this.elements.photoQuiz.photo.onerror = () => {
             // If image fails, skip to next question

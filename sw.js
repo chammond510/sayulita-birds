@@ -1,5 +1,5 @@
 // Service Worker for Sayulita Birds Flashcard App
-const CACHE_NAME = 'sayulita-birds-v4';
+const CACHE_NAME = 'sayulita-birds-v5';
 
 // All files to cache
 const ASSETS_TO_CACHE = [

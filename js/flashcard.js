@@ -5,10 +5,15 @@ const Flashcard = {
     isFlipped: false,
     touchStartX: 0,
     touchEndX: 0,
+    touchStartTarget: null,
+    currentPhotoIndex: 0,
+    photoUrls: [],
 
     elements: {
         card: null,
-        photo: null,
+        gallery: null,
+        galleryTrack: null,
+        galleryDots: null,
         name: null,
         scientific: null,
         frequency: null,
@@ -29,7 +34,9 @@ const Flashcard = {
     init() {
         // Cache DOM elements
         this.elements.card = document.getElementById('flashcard');
-        this.elements.photo = document.getElementById('birdPhoto');
+        this.elements.gallery = document.getElementById('photoGallery');
+        this.elements.galleryTrack = document.getElementById('galleryTrack');
+        this.elements.galleryDots = document.getElementById('galleryDots');
         this.elements.name = document.getElementById('birdName');
         this.elements.scientific = document.getElementById('birdScientific');
         this.elements.frequency = document.getElementById('birdFrequency');
@@ -44,7 +51,11 @@ const Flashcard = {
         this.elements.progressText = document.getElementById('progressText');
 
         // Set up event listeners
-        this.elements.card.addEventListener('click', () => this.flip());
+        this.elements.card.addEventListener('click', (e) => {
+            // Don't flip if clicking inside gallery dots
+            if (e.target.closest('.gallery-dots')) return;
+            this.flip();
+        });
         this.elements.prevBtn.addEventListener('click', () => this.previous());
         this.elements.nextBtn.addEventListener('click', () => this.next());
         this.elements.playBtn.addEventListener('click', (e) => {
@@ -55,11 +66,17 @@ const Flashcard = {
         // Touch/swipe support
         this.elements.card.addEventListener('touchstart', (e) => {
             this.touchStartX = e.changedTouches[0].screenX;
+            this.touchStartTarget = e.target;
         }, { passive: true });
 
         this.elements.card.addEventListener('touchend', (e) => {
             this.touchEndX = e.changedTouches[0].screenX;
             this.handleSwipe();
+        }, { passive: true });
+
+        // Gallery scroll listener to update dots
+        this.elements.galleryTrack.addEventListener('scroll', () => {
+            this.updateGalleryDots();
         }, { passive: true });
 
         // Keyboard navigation
@@ -68,10 +85,18 @@ const Flashcard = {
 
             switch (e.key) {
                 case 'ArrowLeft':
-                    this.previous();
+                    if (!this.isFlipped && this.photoUrls.length > 1) {
+                        this.scrollToPhoto(this.currentPhotoIndex - 1);
+                    } else {
+                        this.previous();
+                    }
                     break;
                 case 'ArrowRight':
-                    this.next();
+                    if (!this.isFlipped && this.photoUrls.length > 1) {
+                        this.scrollToPhoto(this.currentPhotoIndex + 1);
+                    } else {
+                        this.next();
+                    }
                     break;
                 case ' ':
                 case 'Enter':
@@ -94,6 +119,14 @@ const Flashcard = {
     },
 
     handleSwipe() {
+        // If touch started inside the photo gallery and card is not flipped,
+        // let CSS scroll-snap handle the horizontal swipe (don't navigate birds)
+        if (!this.isFlipped && this.touchStartTarget &&
+            this.touchStartTarget.closest('.photo-gallery') &&
+            this.photoUrls.length > 1) {
+            return;
+        }
+
         const threshold = 50;
         const diff = this.touchEndX - this.touchStartX;
 
@@ -104,6 +137,61 @@ const Flashcard = {
                 this.next();
             }
         }
+    },
+
+    renderGallery(bird) {
+        this.photoUrls = BirdData.getPhotoUrls(bird);
+        this.currentPhotoIndex = 0;
+
+        // Build slides
+        this.elements.galleryTrack.innerHTML = this.photoUrls.map((url, i) => `
+            <div class="gallery-slide">
+                <img src="${url}" alt="${bird.commonName}" ${i > 0 ? 'loading="lazy"' : ''}>
+            </div>
+        `).join('');
+
+        // Build dots (hidden if only 1 photo)
+        if (this.photoUrls.length > 1) {
+            this.elements.galleryDots.innerHTML = this.photoUrls.map((_, i) => `
+                <button class="gallery-dot${i === 0 ? ' active' : ''}" data-index="${i}"></button>
+            `).join('');
+
+            // Dot click handlers
+            this.elements.galleryDots.querySelectorAll('.gallery-dot').forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.scrollToPhoto(parseInt(dot.dataset.index));
+                });
+            });
+        } else {
+            this.elements.galleryDots.innerHTML = '';
+        }
+
+        // Reset scroll position
+        this.elements.galleryTrack.scrollLeft = 0;
+    },
+
+    scrollToPhoto(index) {
+        if (index < 0 || index >= this.photoUrls.length) return;
+        this.currentPhotoIndex = index;
+        const slideWidth = this.elements.galleryTrack.offsetWidth;
+        this.elements.galleryTrack.scrollTo({
+            left: slideWidth * index,
+            behavior: 'smooth'
+        });
+    },
+
+    updateGalleryDots() {
+        if (this.photoUrls.length <= 1) return;
+        const slideWidth = this.elements.galleryTrack.offsetWidth;
+        if (slideWidth === 0) return;
+        const newIndex = Math.round(this.elements.galleryTrack.scrollLeft / slideWidth);
+        if (newIndex !== this.currentPhotoIndex) {
+            this.currentPhotoIndex = newIndex;
+        }
+        this.elements.galleryDots.querySelectorAll('.gallery-dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === this.currentPhotoIndex);
+        });
     },
 
     async showBird(index) {
@@ -121,19 +209,8 @@ const Flashcard = {
         // Stop any playing audio
         this.stopAudio();
 
-        // Update photo
-        this.elements.photo.src = BirdData.getPhotoUrl(bird);
-        this.elements.photo.alt = bird.commonName;
-        this.elements.photo.onerror = () => {
-            // Show placeholder if image fails to load
-            this.elements.photo.parentElement.innerHTML = `
-                <div class="photo-placeholder">
-                    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M10,10A2,2 0 0,0 8,12A2,2 0 0,0 10,14A2,2 0 0,0 12,12A2,2 0 0,0 10,10M14,10A2,2 0 0,0 12,12A2,2 0 0,0 14,14A2,2 0 0,0 16,12A2,2 0 0,0 14,10Z"/></svg>
-                    <p class="species-name">${bird.commonName}</p>
-                </div>
-                <div class="photo-hint">Tap to reveal</div>
-            `;
-        };
+        // Render photo gallery
+        this.renderGallery(bird);
 
         // Update info
         this.elements.name.textContent = bird.commonName;

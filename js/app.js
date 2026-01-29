@@ -259,10 +259,13 @@ const App = {
         const progressContainer = document.getElementById('downloadProgressContainer');
 
         const birds = BirdData.getAllBirds();
-        const totalFiles = birds.length * 2; // images + audio
+        let totalFiles = 0;
+        birds.forEach(bird => {
+            totalFiles += (bird.photoCount || 1) + 1; // photos + audio
+        });
 
         // Reset modal state
-        info.textContent = `Download all ${totalFiles} photos and audio files for offline use (~17MB).`;
+        info.textContent = `Download all ${totalFiles} photos and audio files for offline use (~35MB).`;
         startBtn.style.display = '';
         startBtn.disabled = false;
         startBtn.textContent = 'Download All Media';
@@ -287,6 +290,10 @@ const App = {
 
         birds.forEach(bird => {
             files.push(`assets/images/birds/${bird.id}.jpg`);
+            const photoCount = bird.photoCount || 1;
+            for (let i = 2; i <= photoCount; i++) {
+                files.push(`assets/images/birds/${bird.id}-${i}.jpg`);
+            }
             files.push(`assets/audio/calls/${bird.id}.mp3`);
         });
 
@@ -299,7 +306,7 @@ const App = {
         // If Cache API is available (localhost/HTTPS), use it for reliable offline
         if (useCache) {
             try {
-                cache = await caches.open('sayulita-birds-v4');
+                cache = await caches.open('sayulita-birds-v5');
             } catch (e) {
                 cache = null;
             }
